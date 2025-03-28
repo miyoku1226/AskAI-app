@@ -14,6 +14,11 @@ def index():
     result = ""
     if request.method == "POST":
         user_input = request.form["text"]
+        if "file" in request.files:
+            file = request.files["file"]
+            if file and file.filename.endswith(".txt"):
+                user_input = file.read().decode("utf-8")
+                
         if user_input:
             client = OpenAI()
 
