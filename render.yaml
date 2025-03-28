@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: askai
+    env: python
+    buildCommand: ""
+    startCommand: python app.py
+    plan: free
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
