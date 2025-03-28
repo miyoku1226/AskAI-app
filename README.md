@@ -2,7 +2,7 @@
 
 A lightweight web app that summarizes user-submitted text using GPT-3.5.
 
-## 🔧 Features 功能特点
+## Features
 
 - Calls OpenAI's GPT-3.5 API to summarize text  
 - Simple interface: paste text and get a summary  
