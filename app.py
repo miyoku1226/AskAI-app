@@ -28,12 +28,21 @@ def index():
                     return render_template("index.html", result=result)
 
         if user_input:
+            mode = request.form.get("mode", "summarize")
+
+            if mode == "summarize":
+                prompt = f"Summarize this text:\n{user_input}"
+            elif mode == "translate":
+                prompt = f"Translate the following text to Chinese:\n{user_input}"
+            elif mode == "analyze":
+                prompt = f"What is the overall sentiment of this text? Respond with Positive, Negative, or Neutral.\n{user_input}"
+            else:
+                prompt = user_input
+
             try:
                 response = client.chat.completions.create(
                     model="gpt-3.5-turbo",
-                    messages=[
-                        {"role": "user", "content": f"Summarize this text:\n{user_input}"}
-                    ]
+                    messages=[{"role": "user", "content": prompt}]
                 )
                 result = response.choices[0].message.content
             except Exception as e:
