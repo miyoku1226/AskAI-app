@@ -5,8 +5,9 @@
 </head>
 <body>
     <h1>AskAI – Text Summarizer</h1>
-    <form method="POST">
+    <form method="POST" enctype="multipart/form-data">
         <textarea name="text" rows="10" cols="70" placeholder="Paste your text here..."></textarea><br>
+        <input type="file" name="file"><br><br>
         <button type="submit">Summarize</button>
     </form>
 
