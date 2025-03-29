@@ -15,7 +15,7 @@ Built with Flask, OpenAI API, and Bootstrap.
 ## Demo
 
 Try it now:  
-**[https://askai-ylt9.onrender.com](https://askai-ylt9.onrender.com)**
+**[https://askai-ytt9.onrender.com](https://askai-ytt9.onrender.com)**
 
 Paste text or upload a `.txt` file, choose a mode, and get instant results!
 
